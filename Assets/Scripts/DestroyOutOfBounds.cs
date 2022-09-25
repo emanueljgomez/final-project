@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class DestroyOutOfBounds : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+    // Start() was removed
     // Update is called once per frame
     void Update()
     {
+        DestroyOutOfBoundsObject();
+    }
+
+    // ========================================
+    // ========================================
+
+    void DestroyOutOfBoundsObject() {
         if (transform.position.z > 120)
         {
             Destroy(gameObject);
