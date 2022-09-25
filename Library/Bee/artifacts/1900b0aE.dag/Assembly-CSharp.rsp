@@ -355,7 +355,9 @@
 "Assets/Asteroids Pack/Assets/Scripts/RandomRotator.cs"
 "Assets/Scripts/DestroyOutOfBounds.cs"
 "Assets/Scripts/MissileMovement.cs"
+"Assets/Scripts/MoveBackground.cs"
 "Assets/Scripts/PlayerController.cs"
+"Assets/Scripts/RepeatBackground.cs"
 "Assets/StarSparrow/Readme/Readme Files/Scripts/ReadmeStarSparrow.cs"
 -langversion:9.0
 
