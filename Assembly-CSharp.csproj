@@ -43,6 +43,9 @@
      <Compile Include="Assets\StarSparrow\Readme\Readme Files\Scripts\ReadmeStarSparrow.cs" />
      <Compile Include="Assets\Scripts\MissileMovement.cs" />
      <Compile Include="Assets\Asteroids Pack\Assets\Scripts\RandomRotator.cs" />
+     <Compile Include="Assets\Scripts\MoveAsteroid.cs" />
+     <Compile Include="Assets\Scripts\SpawnManager.cs" />
+     <Compile Include="Assets\Scripts\DeathZone.cs" />
      <None Include="Assets\Sayantan\Props\Small\CruiseMissile\ReadMe.txt" />
      <None Include="Assets\StarSparrow\SubstancePainter\Substance3DPainter.txt" />
     <Reference Include="UnityEngine">

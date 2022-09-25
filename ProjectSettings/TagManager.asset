@@ -4,9 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy
   - bg
   - bgprefab
+  - Asteroid1
+  - Asteroid2
+  - Asteroid3
   layers:
   - Default
   - TransparentFX
