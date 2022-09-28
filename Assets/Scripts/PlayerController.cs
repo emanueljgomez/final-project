@@ -8,8 +8,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float horizontalInput;
     [SerializeField] private float speed = 40.0f;
     [SerializeField] private GameObject projectilePrefab; // Component Variable for Player (assign prefab projectile)
+    [SerializeField] private bool cooldown;
 
-    // Start() was removed
+    void Start()
+    {
+        InvokeRepeating("RestartCooldown", 0.7f, 0.7f);
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -27,11 +32,12 @@ public class PlayerController : MonoBehaviour
     }
 
     void PlayerAttack() {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && cooldown == false)
         {
         // Launch a proyectile from the Player
             Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
         // Instantiate method: creates a copy of a prefab. Formula: Instantiate(Original object, spawn position, rotation)
+            cooldown = true;
         }
     }
 
@@ -45,6 +51,10 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = new Vector3(35, transform.position.y, transform.position.z);
         }
+    }
+
+    void RestartCooldown() {
+        cooldown = false;
     }
 
 }
