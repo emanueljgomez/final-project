@@ -9,18 +9,22 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float speed = 40.0f;
     [SerializeField] private GameObject projectilePrefab; // Component Variable for Player (assign prefab projectile)
     [SerializeField] private bool cooldown;
+    [SerializeField] private int playerHealth = 100;
 
     void Start()
     {
-        InvokeRepeating("RestartCooldown", 0.7f, 0.7f);
+        PlayerPrefs.SetInt("PHealth", playerHealth);
+        InvokeRepeating("RestartAttackCooldown", 0.7f, 0.7f);
     }
 
     // Update is called once per frame
     void Update()
-    {
+    {   
+        playerHealth = PlayerPrefs.GetInt("PHealth");
        PlayerHorizontalMovement();
        PlayerAttack();
-       KeepPlayerInBounds();
+       KeepPlayerInBounds();       
+       checkHealth();
     }
 
     // ========================================
@@ -53,8 +57,16 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void RestartCooldown() {
+    void RestartAttackCooldown() {
         cooldown = false;
+    }
+
+    void checkHealth() {
+        if (playerHealth <= 0) {
+            gameObject.SetActive(false);
+            Debug.Log("GAME OVER!");
+            Time.timeScale = 0;
+        }
     }
 
 }
