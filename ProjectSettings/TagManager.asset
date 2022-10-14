@@ -9,6 +9,10 @@ TagManager:
   - Asteroid1
   - Asteroid2
   - Asteroid3
+  - PlayBtn
+  - StartScreen
+  - PlayerNameInput
+  - ShowPlayerName
   layers:
   - Default
   - TransparentFX

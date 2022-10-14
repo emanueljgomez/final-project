@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject projectilePrefab; // Component Variable for Player (assign prefab projectile)
     [SerializeField] private bool cooldown;
     [SerializeField] private int playerHealth = 100;
+    [SerializeField] private GameObject endScreen;
 
     void Start()
     {
@@ -66,6 +67,7 @@ public class PlayerController : MonoBehaviour
             gameObject.SetActive(false);
             Debug.Log("GAME OVER!");
             Time.timeScale = 0;
+            endScreen.SetActive(true);
         }
     }
 
