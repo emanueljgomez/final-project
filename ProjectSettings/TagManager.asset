@@ -13,6 +13,9 @@ TagManager:
   - StartScreen
   - PlayerNameInput
   - ShowPlayerName
+  - ShowScore
+  - PlayerProjectile
+  - ShowMaxScore
   layers:
   - Default
   - TransparentFX

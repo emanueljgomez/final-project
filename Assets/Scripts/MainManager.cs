@@ -19,6 +19,7 @@ public class MainManager : MonoBehaviour
     {
         Time.timeScale = 0;
         endScreen.SetActive(false);
+        PlayerPrefs.SetInt("Score", 0);
         playBtn = GameObject.FindGameObjectWithTag("PlayBtn");
         startScreen = GameObject.FindGameObjectWithTag("StartScreen");
         maxScore = PlayerPrefs.GetInt("MaxScore");
@@ -26,7 +27,7 @@ public class MainManager : MonoBehaviour
         Debug.Log("(MainManager.cs) Current Max score: " + maxScore);
         Debug.Log("(MainManager.cs) Last Player: " + username);
         Debug.Log("(MainManager.cs) Current Champion: " + champion);
-        maxScoreText.text = $"[ Highest Score ]\n{champion} - {maxScore}";
+        maxScoreText.text = $"{champion} - {maxScore}";
     }
 
     // Update is called once per frame
