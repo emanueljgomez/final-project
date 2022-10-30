@@ -71,11 +71,8 @@ public class DeathZoneAsteroid : MonoBehaviour
             // ----------
             Debug.Log("Type 3 Asteroid impact detected! -- Hull integrity: " + playerHealth);
             Destroy(gameObject);
-        } else {
-            Destroy(other.gameObject);
-            Destroy(gameObject);
-
-            if (gameObject.tag == "Asteroid3" ){            
+        } else if (other.gameObject.tag == "PlayerProjectile" && gameObject.tag == "Asteroid3" )
+        {          
                 
                 score = score + 10; // Value changes depending on asteroid type
                 PlayerPrefs.SetInt("Score", score);
@@ -83,8 +80,11 @@ public class DeathZoneAsteroid : MonoBehaviour
                 scoreText.text = $"Score: {score}";
                 Debug.Log("(DeathZoneAsteroid.cs) Type 3 Asteroid destroyed - Score updated: " + score);
                 checkMaxScore();
+                Destroy(other.gameObject);
+                Destroy(gameObject);
 
-            }  else if (gameObject.tag == "Asteroid2" ){
+            }  else if (other.gameObject.tag == "PlayerProjectile" && gameObject.tag == "Asteroid2" )
+            {
 
                 //Destroy(gameObject);
 
@@ -94,8 +94,11 @@ public class DeathZoneAsteroid : MonoBehaviour
                 scoreText.text = $"Score: {score}";
                 Debug.Log("(DeathZoneAsteroid.cs) Type 2 Asteroid destroyed - Score updated: " + score);
                 checkMaxScore();
+                Destroy(other.gameObject);
+                Destroy(gameObject);
 
-            } else if (gameObject.tag == "Asteroid1" ){
+            } else if (other.gameObject.tag == "PlayerProjectile" && gameObject.tag == "Asteroid1" )
+            {
 
                 //Destroy(gameObject);
 
@@ -105,6 +108,8 @@ public class DeathZoneAsteroid : MonoBehaviour
                 scoreText.text = $"Score: {score}";
                 Debug.Log("(DeathZoneAsteroid.cs) Type 1 Asteroid destroyed - Score updated: " + score);
                 checkMaxScore();
+                Destroy(other.gameObject);
+                Destroy(gameObject);
 
             }            
         }
@@ -148,7 +153,7 @@ public class DeathZoneAsteroid : MonoBehaviour
 
         }
         */
-    }
+    
 
     private void checkMaxScore() {
         if (score > maxScore) {

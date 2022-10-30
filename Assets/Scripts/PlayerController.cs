@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool cooldown;
     [SerializeField] private int playerHealth = 100;
     [SerializeField] private GameObject endScreen;
+    [SerializeField] private GameObject restartBtn;
+    [SerializeField] private GameObject gameOverText;
 
     void Start()
     {
@@ -68,6 +70,8 @@ public class PlayerController : MonoBehaviour
             Debug.Log("GAME OVER!");
             Time.timeScale = 0;
             endScreen.SetActive(true);
+            restartBtn.gameObject.SetActive(true);
+            gameOverText.SetActive(true);
         }
     }
 

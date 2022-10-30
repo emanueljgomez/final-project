@@ -8,6 +8,8 @@ public class MainManager : MonoBehaviour
     [SerializeField] private GameObject endScreen;
     [SerializeField] private GameObject playBtn;
     [SerializeField] private GameObject startScreen;
+    [SerializeField] private GameObject player;
+    [SerializeField] private GameObject restartBtn;
     [SerializeField] private string username;
     [SerializeField] private string champion;
     [SerializeField] private Text maxScoreText;
@@ -19,6 +21,7 @@ public class MainManager : MonoBehaviour
     {
         Time.timeScale = 0;
         endScreen.SetActive(false);
+        restartBtn.gameObject.SetActive(false);
         PlayerPrefs.SetInt("Score", 0);
         playBtn = GameObject.FindGameObjectWithTag("PlayBtn");
         startScreen = GameObject.FindGameObjectWithTag("StartScreen");
@@ -42,5 +45,14 @@ public class MainManager : MonoBehaviour
     {
         Time.timeScale = 1;
         startScreen.gameObject.SetActive(false);
+    }
+
+    public void RestartGame()
+    {   
+        Debug.Log("(MainManager.cs) Juego reiniciado!");
+        endScreen.gameObject.SetActive(false);
+        restartBtn.gameObject.SetActive(false);
+        startScreen.gameObject.SetActive(true);
+        player.gameObject.SetActive(true);
     }
 }

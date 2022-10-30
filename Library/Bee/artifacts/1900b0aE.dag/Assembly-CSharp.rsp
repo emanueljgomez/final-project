@@ -363,6 +363,7 @@
 "Assets/Scripts/MoveBackground.cs"
 "Assets/Scripts/PlayerController.cs"
 "Assets/Scripts/RepeatBackground.cs"
+"Assets/Scripts/RestartButtonAction.cs"
 "Assets/Scripts/SpawnManager.cs"
 "Assets/StarSparrow/Readme/Readme Files/Scripts/ReadmeStarSparrow.cs"
 -langversion:9.0
