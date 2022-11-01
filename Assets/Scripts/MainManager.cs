@@ -46,13 +46,5 @@ public class MainManager : MonoBehaviour
         Time.timeScale = 1;
         startScreen.gameObject.SetActive(false);
     }
-
-    public void RestartGame()
-    {   
-        Debug.Log("(MainManager.cs) Juego reiniciado!");
-        endScreen.gameObject.SetActive(false);
-        restartBtn.gameObject.SetActive(false);
-        startScreen.gameObject.SetActive(true);
-        player.gameObject.SetActive(true);
-    }
+    
 }
