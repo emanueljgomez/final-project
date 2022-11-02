@@ -47,6 +47,7 @@
      <Compile Include="Assets\Scripts\RepeatBackground.cs" />
      <Compile Include="Assets\StarSparrow\Readme\Readme Files\Scripts\ReadmeStarSparrow.cs" />
      <Compile Include="Assets\Scripts\MissileMovement.cs" />
+     <Compile Include="Assets\Scripts\DeathZoneAsteroidSpecial.cs" />
      <Compile Include="Assets\Scripts\SpawnManager.cs" />
      <Compile Include="Assets\Scripts\MenuControl.cs" />
      <Compile Include="Assets\Asteroids Pack\Assets\Scripts\RandomRotator.cs" />

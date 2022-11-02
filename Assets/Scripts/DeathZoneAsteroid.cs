@@ -71,7 +71,7 @@ public class DeathZoneAsteroid : MonoBehaviour
             // ----------
             Debug.Log("Type 3 Asteroid impact detected! -- Hull integrity: " + playerHealth);
             Destroy(gameObject);
-        } else if (other.gameObject.tag == "PlayerProjectile" && gameObject.tag == "Asteroid3" )
+        } else if (other.gameObject.tag == "PlayerProjectile" && (gameObject.tag == "Asteroid3" | gameObject.tag == "Asteroid4") )
         {          
                 
                 score = score + 10; // Value changes depending on asteroid type
@@ -97,7 +97,7 @@ public class DeathZoneAsteroid : MonoBehaviour
                 Destroy(other.gameObject);
                 Destroy(gameObject);
 
-            } else if (other.gameObject.tag == "PlayerProjectile" && gameObject.tag == "Asteroid1" )
+            } else if (other.gameObject.tag == "PlayerProjectile" && (gameObject.tag == "Asteroid1" | gameObject.tag == "Asteroid5") )
             {
 
                 //Destroy(gameObject);

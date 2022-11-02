@@ -17,6 +17,8 @@ TagManager:
   - PlayerProjectile
   - ShowMaxScore
   - GameManager
+  - Asteroid4
+  - Asteroid5
   layers:
   - Default
   - TransparentFX

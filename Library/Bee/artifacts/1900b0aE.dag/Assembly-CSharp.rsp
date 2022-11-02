@@ -355,6 +355,7 @@
 "Assets/Asteroids Pack/Assets/Scripts/RandomRotator.cs"
 "Assets/Scripts/ButtonStart.cs"
 "Assets/Scripts/DeathZoneAsteroid.cs"
+"Assets/Scripts/DeathZoneAsteroidSpecial.cs"
 "Assets/Scripts/DestroyOutOfBounds.cs"
 "Assets/Scripts/MainManager.cs"
 "Assets/Scripts/MenuControl.cs"
