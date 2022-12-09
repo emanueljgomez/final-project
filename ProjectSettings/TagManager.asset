@@ -19,6 +19,7 @@ TagManager:
   - GameManager
   - Asteroid4
   - Asteroid5
+  - Asteroid4B
   layers:
   - Default
   - TransparentFX

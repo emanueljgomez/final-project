@@ -155,9 +155,12 @@ MonoBehaviour:
   playerHealth: 0
   score: 0
   maxScore: 0
+  points: 0
   scoreText: {fileID: 0}
   maxScoreText: {fileID: 0}
   username: 
+  otherGO: {fileID: 0}
+  miniAsteroid: {fileID: 130102, guid: 483d8156448706748bdd7b9887fd840e, type: 3}
 --- !u!1 &153142
 GameObject:
   m_ObjectHideFlags: 0

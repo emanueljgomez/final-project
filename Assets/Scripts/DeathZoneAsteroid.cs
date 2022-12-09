@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class DeathZoneAsteroid : MonoBehaviour
 {
-    [SerializeField] private int playerHealth;
+    public int playerHealth;
     [SerializeField] private int score;
     [SerializeField] private int maxScore;
     [SerializeField] private int points;
@@ -69,7 +69,12 @@ public class DeathZoneAsteroid : MonoBehaviour
                 points = 20;
                 otherGO = other.gameObject;
                 handleDestroy();
-            }            
+            } else if (other.gameObject.tag == "PlayerProjectile" && gameObject.tag == "Asteroid4B" )
+            {
+                points = 5;
+                otherGO = other.gameObject;
+                handleDestroy();
+            }         
         }
             
 
