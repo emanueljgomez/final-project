@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject gameOverText;
 
     void Start()
-    {
+    { 
         PlayerPrefs.SetInt("PHealth", playerHealth);
         InvokeRepeating("RestartAttackCooldown", 0.7f, 0.7f);
     }
@@ -74,5 +74,4 @@ public class PlayerController : MonoBehaviour
             gameOverText.SetActive(true);
         }
     }
-
 }

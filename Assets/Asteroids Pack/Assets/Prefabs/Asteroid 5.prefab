@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 3402780631747135508}
   - component: {fileID: 3230075180098251259}
   - component: {fileID: 8972830654189929577}
-  - component: {fileID: 8483283120016436822}
+  - component: {fileID: 4966923991703351976}
   m_Layer: 0
   m_Name: Asteroid 5
   m_TagString: Asteroid5
@@ -306,7 +306,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4, y: 4, z: 4}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8483283120016436822
+--- !u!114 &4966923991703351976
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -315,7 +315,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 151664}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 247d6c91b74ade6469539ddd954a01f0, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a5f493cb88f52e429b4b49db1d9848b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: 0

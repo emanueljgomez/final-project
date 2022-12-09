@@ -12,7 +12,7 @@ public class RestartButtonAction : MonoBehaviour
     [SerializeField] private GameObject endScreen;
     [SerializeField] private GameObject startScreen;
     [SerializeField] private GameObject player;
-     [SerializeField] private Text scoreText;
+    [SerializeField] private Text scoreText;
 
     void Start()
     {
@@ -32,6 +32,5 @@ public class RestartButtonAction : MonoBehaviour
         player.gameObject.SetActive(true);
         PlayerPrefs.SetInt("Score", 0);
         scoreText.text = $"Score: 0";
-        // Hacer: desactivar cartel Game Over y volver a mostrar Pantalla de Inicio - reiniciar HP del jugador
     }
 }

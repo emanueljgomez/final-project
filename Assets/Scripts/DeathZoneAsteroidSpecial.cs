@@ -5,7 +5,10 @@ using UnityEngine.UI;
 
 public class DeathZoneAsteroidSpecial : DeathZoneAsteroid
 {
-
-    // Probando Herencia
+    // Polymorphism: handleDestroy() from DeathZoneAsteroid.cs base functionality is extended
+    public override void handleDestroy() {
+        Debug.Log("SPECIAL COLLISION DETECTED!");
+        base.handleDestroy();
+    }
 
 }
