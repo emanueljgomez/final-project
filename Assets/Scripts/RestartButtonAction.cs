@@ -13,6 +13,7 @@ public class RestartButtonAction : MonoBehaviour
     [SerializeField] private GameObject startScreen;
     [SerializeField] private GameObject player;
     [SerializeField] private Text scoreText;
+    [SerializeField] private Text healthText;
 
     void Start()
     {
@@ -24,6 +25,8 @@ public class RestartButtonAction : MonoBehaviour
     public void RestartGame()
     {   
         PlayerPrefs.SetInt("PHealth", playerHealth);
+        healthText = GameObject.FindGameObjectWithTag("healthText").GetComponent<Text>();
+        healthText.text = $"{playerHealth}%";
         Debug.Log("(RestartButtonAction.cs) Juego reiniciado!");
         gameObject.SetActive(false);
         gameOverText.SetActive(false);

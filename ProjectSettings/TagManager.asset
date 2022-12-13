@@ -20,6 +20,8 @@ TagManager:
   - Asteroid4
   - Asteroid5
   - Asteroid4B
+  - healthText
+  - statusText
   layers:
   - Default
   - TransparentFX

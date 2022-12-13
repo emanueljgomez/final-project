@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class DeathZoneAsteroid : MonoBehaviour
 {
     public int playerHealth;
+    public Text healthText;
+    public Text statusText;
     [SerializeField] private int score;
     [SerializeField] private int maxScore;
     [SerializeField] private int points;
@@ -13,6 +15,11 @@ public class DeathZoneAsteroid : MonoBehaviour
     [SerializeField] private Text maxScoreText;
     [SerializeField] private string username;
     [SerializeField] private GameObject otherGO;
+
+    void Start() {
+        healthText = GameObject.FindGameObjectWithTag("healthText").GetComponent<Text>();
+        statusText = GameObject.FindGameObjectWithTag("statusText").GetComponent<Text>();
+    }
     
     private void OnTriggerEnter(Collider other) {
 
@@ -31,6 +38,7 @@ public class DeathZoneAsteroid : MonoBehaviour
             playerHealth = PlayerPrefs.GetInt("PHealth");
             playerHealth = playerHealth -20; // Value changes depending on asteroid type
             PlayerPrefs.SetInt("PHealth", playerHealth);
+            healthText.text = $"{playerHealth}%";
             // ----------
             Debug.Log("Type 1 Asteroid impact detected! -- Hull integrity: " + playerHealth);
             Destroy(gameObject);
@@ -40,6 +48,7 @@ public class DeathZoneAsteroid : MonoBehaviour
             playerHealth = PlayerPrefs.GetInt("PHealth");
             playerHealth = playerHealth -30; // Value changes depending on asteroid type
             PlayerPrefs.SetInt("PHealth", playerHealth);
+            healthText.text = $"{playerHealth}%";
             // ----------
             Debug.Log("Type 2 Asteroid impact detected! -- Hull integrity: " + playerHealth);
             Destroy(gameObject);
@@ -49,6 +58,7 @@ public class DeathZoneAsteroid : MonoBehaviour
             playerHealth = PlayerPrefs.GetInt("PHealth");
             playerHealth = playerHealth -10; // Value changes depending on asteroid type
             PlayerPrefs.SetInt("PHealth", playerHealth);
+            healthText.text = $"{playerHealth}%";
             // ----------
             Debug.Log("Type 3 Asteroid impact detected! -- Hull integrity: " + playerHealth);
             Destroy(gameObject);
