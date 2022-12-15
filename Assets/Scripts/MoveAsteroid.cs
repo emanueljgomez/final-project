@@ -17,6 +17,7 @@ public class MoveAsteroid : MonoBehaviour
         score = PlayerPrefs.GetInt("Score");
         statusText = GameObject.FindGameObjectWithTag("statusText").GetComponent<Text>();
         scoreText = GameObject.FindGameObjectWithTag("ShowScore").GetComponent<Text>();
+        Invoke("updateStatus", 5.0f);
     }
 
     // Update is called once per frame
@@ -79,7 +80,19 @@ public class MoveAsteroid : MonoBehaviour
         PlayerPrefs.SetInt("Score", score);
         // ----------
         scoreText.text = $"Score: {score}";
+        statusText.text = "Failed to destroy asteroid" + "\n" + "[ -" + points + " Points ]";
+        statusText.GetComponent<Text>().color = Color.red;
         Debug.Log("Failed to destroy: [ " + gameObject.tag + " ] - Score updated: " + score);
+    }
+
+    void updateStatus()
+    {   
+
+        if (!(statusText.text == "---")) {
+            statusText.text = "---";
+            statusText.GetComponent<Text>().color = Color.white;
+        }
+
     }
 
 }

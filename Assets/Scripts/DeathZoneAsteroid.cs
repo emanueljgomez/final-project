@@ -8,7 +8,7 @@ public class DeathZoneAsteroid : MonoBehaviour
     public int playerHealth;
     public Text healthText;
     public Text statusText;
-    [SerializeField] private int score;
+    [SerializeField] private int score; // ENCAPSULATION
     [SerializeField] private int maxScore;
     [SerializeField] private int points;
     [SerializeField] private Text scoreText;    
@@ -52,7 +52,7 @@ public class DeathZoneAsteroid : MonoBehaviour
             // ----------
             Debug.Log("Type 2 Asteroid impact detected! -- Hull integrity: " + playerHealth);
             Destroy(gameObject);
-        } else if (other.gameObject.tag == "Player" && (gameObject.tag == "Asteroid3" | gameObject.tag == "Asteroid4") )
+        } else if (other.gameObject.tag == "Player" && (gameObject.tag == "Asteroid3" | gameObject.tag == "Asteroid4" | gameObject.tag == "Asteroid4B") )
         {
             // Using PlayerPrefs to track Player's Health
             playerHealth = PlayerPrefs.GetInt("PHealth");
@@ -103,7 +103,7 @@ public class DeathZoneAsteroid : MonoBehaviour
         // ----------
         scoreText.text = $"Score: {score}";
         Debug.Log("[ " + gameObject.tag + " ] destroyed - Score updated: " + score);
-        checkMaxScore();
+        checkMaxScore(); // ABSTRACTION
         Destroy(otherGO);
         Destroy(gameObject);
     }
